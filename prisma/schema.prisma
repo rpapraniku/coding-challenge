@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Asset {
+  oid               Int    @id @default(autoincrement())
+  id                String
+  rank              Int
+  symbol            String
+  name              String
+  supply            Int?
+  maxSupply         Int?
+  marketCapUsd      Int?
+  volumeUsd24Hr     Int?
+  priceUsd          Int?
+  changePercent24Hr Int?
+  vwap24Hr          Int?
+}

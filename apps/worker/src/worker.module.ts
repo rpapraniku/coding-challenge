@@ -1,9 +1,9 @@
-import { Module } from '@nestjs/common';
+import { HttpModule, Module } from '@nestjs/common';
 import { WorkerController } from './worker.controller';
 import { WorkerService } from './worker.service';
 
 @Module({
-  imports: [],
+  imports: [HttpModule],
   controllers: [WorkerController],
   providers: [WorkerService],
 })
